@@ -50,6 +50,7 @@ function preload() {
 function setup() {
   createCanvas(SCREEN_WIDTH, CANVAS_HEIGHT); // Create canvas with updated height
   resetGame();
+  backgroundSound.setVolume(0.2);
   backgroundSound.loop();
 }
 
