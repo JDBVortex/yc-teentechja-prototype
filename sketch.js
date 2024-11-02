@@ -145,7 +145,7 @@ function draw() {
     text("Game Over!", SCREEN_WIDTH / 2 - 90, CANVAS_HEIGHT / 2 - 30);
     fill(WHITE); // Change restart message color to white
     textSize(24);
-    text("Press Space to Restart", SCREEN_WIDTH / 2 - 110, CANVAS_HEIGHT / 2 + 20);
+    text("Click to Restart", SCREEN_WIDTH / 2 - 110, CANVAS_HEIGHT / 2 + 20);
   }
 }
 
