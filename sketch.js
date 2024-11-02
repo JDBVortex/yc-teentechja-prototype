@@ -2,8 +2,8 @@ let safePipeImg, unsafePipeImg, mouseImg; // Declare the mouse image variable
 let dingSound, oofSound; // Declare sound variables
 
 // Screen properties
-const SCREEN_WIDTH = 200;
-const SCREEN_HEIGHT = 300;
+const SCREEN_WIDTH = 400;
+const SCREEN_HEIGHT = 500;
 
 // Adjusted canvas height
 const CANVAS_HEIGHT = SCREEN_HEIGHT - 25; // Updated canvas height
