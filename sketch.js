@@ -29,6 +29,7 @@ let pipes = [];
 
 // Score and game state
 let score = 0;
+let highScore = 0; // High score variable
 let gameActive = true;
 const safePractices = ["Strong Password", "Two-Factor Auth", "Software Updates"];
 const unsafePractices = ["Phishing Link", "Weak Password", "Public Wi-Fi"];
@@ -128,10 +129,17 @@ function draw() {
     // Draw "mouse" (the player character) using the loaded image
     image(mouseImg, mouseXPos - 25, mouseY - 25, 50, 50); // Draws image centered around mouse position
 
-    // Draw score
+    // Draw scores at the top
     fill(WHITE); // Change score color to white
     textSize(24);
-    text(`Score: ${score}`, 10, 30);
+    textAlign(LEFT); // Align to the left
+    text(`Score: ${score}`, 10, 30); // Current score at fixed position
+    text(`High Score: ${highScore}`, 10, 60); // High score below current score
+
+    // Update high score if current score exceeds high score
+    if (score > highScore) {
+      highScore = score; // Set new high score
+    }
 
     // Check if "mouse" is out of bounds (only check if it falls off the bottom)
     if (mouseY > CANVAS_HEIGHT) {
