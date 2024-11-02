@@ -43,12 +43,14 @@ function preload() {
   mouseImg = loadImage("Mouse.png"); // Load mouse image here
   dingSound = loadSound("ding.mp3"); // Load ding sound
   oofSound = loadSound("oof.mp3"); // Load oof sound
+  backgroundSound = loadSound("prototypebackground.mp3");
 }
 
 // Set up the canvas and initial game state
 function setup() {
   createCanvas(SCREEN_WIDTH, CANVAS_HEIGHT); // Create canvas with updated height
   resetGame();
+  backgroundSound.loop();
 }
 
 // Reset the game
@@ -104,7 +106,6 @@ function draw() {
           oofSound.play(); // Play oof sound when hitting an unsafe pipe
           gameActive = false; // Game over if hit an unsafe pipe
         } else {
-          dingSound.play(); // Play ding sound when passing through a safe pipe
           score++; // Increment score for safe pipe
         }
       }
